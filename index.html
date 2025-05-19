@@ -15,11 +15,22 @@
             justify-content: center;
             align-items: center;
             color: #333;
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .message {
             font-size: 1.5rem;
             margin-bottom: 20px;
+        }
+
+        .info {
+            font-size: 0.9rem;
+            color: #555;
+            max-width: 400px;
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
 
         .loader {
@@ -29,11 +40,28 @@
             width: 50px;
             height: 50px;
             animation: spin 1s linear infinite;
+            margin-bottom: 40px;
         }
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
     <script>
@@ -43,11 +71,17 @@
         const rand = Math.random();
         setTimeout(() => {
             window.location.href = rand < 0.5 ? grupaA : grupaB;
-        }, 4000); // 4 second delay for user to see the message
+        }, 3000); // 3 sekundy delay, aby użytkownik mógł przeczytać info
     </script>
 </head>
 <body>
     <div class="message">Trwa przekierowywanie do ankiety...</div>
+    <p class="info">
+        Zbieramy dane w ramach krótkiego testu A/B, aby lepiej zrozumieć preferencje użytkowników. Dziękujemy za pomoc!
+    </p>
     <div class="loader"></div>
+    <footer>
+        Masz pytania? <a href="mailto:twojemail@przyklad.pl">Skontaktuj się ze mną</a>
+    </footer>
 </body>
 </html>
