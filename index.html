@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>A/B Test – NRR Form</title>
+    <script>
+        const grupaA = "https://forms.gle/7XdyFqSxVT3A5Par9"; // Dashboard Power BI
+        const grupaB = "https://forms.gle/m2hnz13H3z6AxC1j8"; // Statyczna tabela
+
+        const rand = Math.random();
+        if (rand < 0.5) {
+            window.location.href = grupaA;
+        } else {
+            window.location.href = grupaB;
+        }
+    </script>
+</head>
+<body>
+    <p>Trwa przekierowywanie do ankiety...</p>
+</body>
+</html>
